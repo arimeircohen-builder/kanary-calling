@@ -52,6 +52,16 @@ test("renders key marketing routes", async () => {
   }
 });
 
+test("renders Ari and Kanary artwork on the about page", async () => {
+  const response = await render("/about");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /\/ari-cohen-headshot\.jpg/);
+  assert.match(html, /\/kanary-logo\.png/);
+  assert.doesNotMatch(html, />AC</);
+});
+
 test("contact form is wired to email Ari", async () => {
   const response = await render("/contact");
   assert.equal(response.status, 200);
