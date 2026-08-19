@@ -37,7 +37,7 @@ test("renders the Kanary Calling homepage", async () => {
   assert.match(html, /Kanary builds the list, calls, qualifies, and follows up\./);
   assert.doesNotMatch(html, /You have the accounts\./);
   assert.match(html, /\/kanary-logo\.png/);
-  assert.match(html, /\/ari-cohen-headshot\.jpg/);
+  assert.match(html, /\/ari-cohen-headshot-v2\.jpg/);
   assert.match(html, /<details class="mobile-navigation">/);
   assert.match(html, /aria-label="Mobile navigation"/);
   assert.match(html, /rel="icon" href="\/kanary-logo-full\.png"/);
@@ -70,7 +70,7 @@ test("renders Ari and Kanary artwork on the about page", async () => {
   assert.equal(response.status, 200);
 
   const html = await response.text();
-  assert.match(html, /\/ari-cohen-headshot\.jpg/);
+  assert.match(html, /\/ari-cohen-headshot-v2\.jpg/);
   assert.match(html, /\/kanary-logo\.png/);
   assert.doesNotMatch(html, />AC</);
 });
