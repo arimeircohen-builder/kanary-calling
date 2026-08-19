@@ -13,9 +13,9 @@ export async function generateMetadata(): Promise<Metadata> {
     title,
     description,
     icons: {
-      icon: [{ url: "/kanary-logo.png", type: "image/png" }],
-      shortcut: "/kanary-logo.png",
-      apple: "/kanary-logo.png",
+      icon: [{ url: "/kanary-logo-full.png", type: "image/png" }],
+      shortcut: "/kanary-logo-full.png",
+      apple: "/kanary-logo-full.png",
     },
     openGraph: { title, description, type: "website", images: [{ url: `${origin}/og.png`, width: 1792, height: 933, alt: "Kanary Calling: Turn cold accounts into real conversations." }] },
     twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
