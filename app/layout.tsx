@@ -24,14 +24,14 @@ export async function generateMetadata(): Promise<Metadata> {
       url: origin,
       siteName: "Kanary Calling",
       images: [{
-        url: `${origin}/og-social-v2.jpg`,
+        url: `${origin}/og-social-v3.jpg`,
         width: 1200,
         height: 630,
         type: "image/jpeg",
         alt: "Kanary Calling: Turn cold accounts into real conversations.",
       }],
     },
-    twitter: { card: "summary_large_image", title, description, images: [`${origin}/og-social-v2.jpg`] },
+    twitter: { card: "summary_large_image", title, description, images: [`${origin}/og-social-v3.jpg`] },
   };
 }
 
