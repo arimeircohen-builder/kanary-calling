@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+import { PageHero, PageShell } from "../components";
+
+export const metadata: Metadata = { title: "Privacy | Kanary Calling", description: "Kanary Calling privacy policy." };
+
+export default function Privacy() { return <PageShell><PageHero eyebrow="Legal" title="Privacy policy"><p>Last updated August 19, 2026</p></PageHero><article className="legal-copy"><h2>Information we collect</h2><p>We may collect the information you choose to share through our contact form, including your name, work email, company, website, and sales needs.</p><h2>How we use it</h2><p>We use this information to respond to your inquiry, evaluate fit, and provide requested services. We do not sell your personal information.</p><h2>Service providers</h2><p>We may use trusted providers for website hosting, scheduling, analytics, and business communication. They may process information only to provide those services.</p><h2>Retention and choices</h2><p>We keep information only as long as needed for legitimate business or legal purposes. You may ask us to access, correct, or delete your information.</p><h2>Contact</h2><p>Use the contact page for questions about this policy. Add the business mailing address and privacy email before public launch.</p></article></PageShell>; }

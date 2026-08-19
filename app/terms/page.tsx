@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+import { PageHero, PageShell } from "../components";
+
+export const metadata: Metadata = { title: "Terms | Kanary Calling", description: "Kanary Calling website terms." };
+
+export default function Terms() { return <PageShell><PageHero eyebrow="Legal" title="Website terms"><p>Last updated August 19, 2026</p></PageHero><article className="legal-copy"><h2>Use of this site</h2><p>This website provides general information about Kanary Calling. You may use it only for lawful purposes.</p><h2>No guarantee of results</h2><p>Outbound results depend on many factors outside our control. Website content is not a promise of meetings, pipeline, revenue, or other business outcomes.</p><h2>Intellectual property</h2><p>Site content, branding, and materials belong to Kanary Calling unless otherwise stated. Do not copy or republish them without permission.</p><h2>Third-party services</h2><p>This site may link to scheduling or other third-party services. Their own terms and privacy policies apply.</p><h2>Changes</h2><p>We may update these terms as the business and website evolve. Add the governing law, legal entity name, and contact address before public launch.</p></article></PageShell>; }
