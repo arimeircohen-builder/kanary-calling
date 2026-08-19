@@ -12,7 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title,
     description,
-    icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+    icons: {
+      icon: [{ url: "/kanary-logo.png", type: "image/png" }],
+      shortcut: "/kanary-logo.png",
+      apple: "/kanary-logo.png",
+    },
     openGraph: { title, description, type: "website", images: [{ url: `${origin}/og.png`, width: 1792, height: 933, alt: "Kanary Calling: Turn cold accounts into real conversations." }] },
     twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
   };

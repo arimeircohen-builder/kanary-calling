@@ -35,6 +35,8 @@ test("renders the Kanary Calling homepage", async () => {
   assert.match(html, /\/ari-cohen-headshot\.jpg/);
   assert.match(html, /<details class="mobile-navigation">/);
   assert.match(html, /aria-label="Mobile navigation"/);
+  assert.match(html, /rel="icon" href="\/kanary-logo\.png"/);
+  assert.doesNotMatch(html, /favicon\.svg/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
 });
 
