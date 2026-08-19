@@ -36,6 +36,10 @@ test("renders the Kanary Calling homepage", async () => {
   assert.match(html, /<details class="mobile-navigation">/);
   assert.match(html, /aria-label="Mobile navigation"/);
   assert.match(html, /rel="icon" href="\/kanary-logo-full\.png"/);
+  assert.match(html, /og-social-v2\.jpg/);
+  assert.match(html, /og:image:width" content="1200"/);
+  assert.match(html, /og:image:height" content="630"/);
+  assert.doesNotMatch(html, /\/og\.png/);
   assert.doesNotMatch(html, /favicon\.svg/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
 });
