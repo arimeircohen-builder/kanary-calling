@@ -36,8 +36,8 @@ export default function Home() {
       </section>
 
       <section className="three-beats">
-        <article><span>01</span><h2>You have the accounts.</h2><p>You know who you want to reach.</p></article>
-        <article><span>02</span><h2>We start the conversations.</h2><p>Kanary calls, learns, qualifies, and follows up.</p></article>
+        <article><span>01</span><h2>You know who you want to reach.</h2><p>Tell us what you sell, the problem it solves, and who it is for.</p></article>
+        <article><span>02</span><h2>We reach out to them.</h2><p>Kanary builds the list, calls, qualifies, and follows up.</p></article>
         <article><span>03</span><h2>Your team sells.</h2><p>Qualified opportunities go to the people who can close them.</p></article>
       </section>
 

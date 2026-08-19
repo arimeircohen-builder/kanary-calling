@@ -31,6 +31,11 @@ test("renders the Kanary Calling homepage", async () => {
   assert.match(html, /Kanary Calling \| Fractional B2B Cold Calling/i);
   assert.match(html, /Turn cold accounts into/);
   assert.match(html, /Founder-led\. Hands-on\. Built for B2B\./);
+  assert.match(html, /You know who you want to reach\./);
+  assert.match(html, /Tell us what you sell, the problem it solves, and who it is for\./);
+  assert.match(html, /We reach out to them\./);
+  assert.match(html, /Kanary builds the list, calls, qualifies, and follows up\./);
+  assert.doesNotMatch(html, /You have the accounts\./);
   assert.match(html, /\/kanary-logo\.png/);
   assert.match(html, /\/ari-cohen-headshot\.jpg/);
   assert.match(html, /<details class="mobile-navigation">/);
