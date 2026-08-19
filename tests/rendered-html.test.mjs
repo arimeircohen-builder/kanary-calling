@@ -56,5 +56,7 @@ test("contact form is wired to email Ari", async () => {
 
   const html = await response.text();
   assert.match(html, /formsubmit\.co\/ari@kanarycalling\.com/i);
+  assert.match(html, /<input(?=[^>]*name="website")(?=[^>]*type="text")(?=[^>]*required)[^>]*>/i);
+  assert.match(html, /placeholder="www\.example\.com"/i);
   assert.doesNotMatch(html, /preview does not send messages/i);
 });
