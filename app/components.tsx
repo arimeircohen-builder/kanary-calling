@@ -13,13 +13,23 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link href="/" aria-label="Kanary Calling home"><Logo /></Link>
-      <nav aria-label="Main navigation">
+      <nav className="desktop-navigation" aria-label="Main navigation">
         <Link href="/what-we-do">What we do</Link>
         <Link href="/who-we-help">Who we help</Link>
         <Link href="/about">About</Link>
         <Link href="/faq">FAQ</Link>
         <Link className="button button-small" href="/contact">Book a fit call</Link>
       </nav>
+      <details className="mobile-navigation">
+        <summary><span>Menu</span><i aria-hidden="true" /></summary>
+        <nav aria-label="Mobile navigation">
+          <Link href="/what-we-do">What we do</Link>
+          <Link href="/who-we-help">Who we help</Link>
+          <Link href="/about">About</Link>
+          <Link href="/faq">FAQ</Link>
+          <Link className="button" href="/contact">Book a fit call</Link>
+        </nav>
+      </details>
     </header>
   );
 }
