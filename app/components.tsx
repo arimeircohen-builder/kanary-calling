@@ -3,7 +3,7 @@ import Link from "next/link";
 export function Logo() {
   return (
     <span className="brand">
-      <span className="brand-signal" aria-hidden="true"><span>K</span></span>
+      <span className="brand-signal" aria-hidden="true"><img src="/kanary-logo.png" alt="" /></span>
       <span>KANARY<span>CALLING</span></span>
     </span>
   );
@@ -48,8 +48,7 @@ export function SignalArt() {
       <div className="signal-ring ring-one" />
       <div className="signal-ring ring-two" />
       <div className="signal-core">
-        <span className="signal-k">K</span>
-        <div className="microphone" aria-hidden="true"><i /><b /></div>
+        <img className="signal-logo" src="/kanary-logo.png" alt="" />
       </div>
       <div className="signal-label"><span>LIVE SIGNAL</span><strong>Call connected</strong></div>
     </div>

@@ -31,6 +31,8 @@ test("renders the Kanary Calling homepage", async () => {
   assert.match(html, /Kanary Calling \| Fractional B2B Cold Calling/i);
   assert.match(html, /Turn cold accounts into/);
   assert.match(html, /Founder-led\. Hands-on\. Built for B2B\./);
+  assert.match(html, /\/kanary-logo\.png/);
+  assert.match(html, /\/ari-cohen-headshot\.jpg/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
 });
 

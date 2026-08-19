@@ -79,7 +79,7 @@ export default function Home() {
       </section>
 
       <section className="founder-section">
-        <div className="founder-visual"><div className="founder-monogram">AC</div><p><strong>ARI COHEN</strong><span>Founder, Kanary Calling</span></p></div>
+        <div className="founder-visual"><img className="founder-headshot" src="/ari-cohen-headshot.jpg" alt="Ari Cohen, founder of Kanary Calling" /><p><strong>ARI COHEN</strong><span>Founder, Kanary Calling</span></p></div>
         <div className="founder-copy"><p className="eyebrow">Founder-led execution</p><h2>Your caller should know how to sell.</h2><p>Cold calling works better when the person making the call understands sales. Not just the script. Not just the dialer. The buyer, the objection, and the reason the conversation should continue.</p><Link className="text-link" href="/about">Meet Ari ↗</Link></div>
       </section>
 
