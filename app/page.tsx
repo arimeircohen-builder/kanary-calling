@@ -84,7 +84,7 @@ export default function Home() {
       </section>
 
       <section className="fractional-section">
-        <div className="fractional-word">FRACTIONAL</div><div><p className="eyebrow">In plain English</p><h2>What does “fractional” mean?</h2><p>You get experienced outbound sales capacity without hiring another full-time employee.</p><p>Think less “outsourced call center.” Think more “outbound rep plugged into your team.”</p></div>
+        <div className="fractional-word">FRACTIONAL</div><div><h2>What does “fractional” mean?</h2><p>You get experienced outbound sales capacity without hiring another full-time employee.</p><p>Think less “outsourced call center.” Think more “outbound rep plugged into your team.”</p></div>
       </section>
 
       <CtaBand />
