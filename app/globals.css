@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
+@font-face { font-family: "Geist"; src: url("/fonts/geist-latin.woff2") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Geist Mono"; src: url("/fonts/geist-mono-latin.woff2") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+
 :root { --yellow: #ffe600; --ink: #11110f; --paper: #fffdf4; --muted: #68675f; }
+html { --font-geist-sans: "Geist"; --font-geist-mono: "Geist Mono"; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-geist-sans), Arial, sans-serif; }
