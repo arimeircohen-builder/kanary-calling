@@ -8,6 +8,7 @@ const description = "Compare the true cost of an in-house SDR team with founder-
 export const metadata: Metadata = {
   title,
   description,
+  robots: { index: false, follow: false },
   openGraph: { title, description, images: [] },
   twitter: { title, description, images: [] },
 };

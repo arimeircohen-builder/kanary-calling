@@ -47,6 +47,7 @@ test("renders the Kanary Calling homepage", async () => {
   assert.doesNotMatch(html, /\/og\.png/);
   assert.doesNotMatch(html, /favicon\.svg/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/i);
+  assert.doesNotMatch(html, /href="\/roi"/i);
 });
 
 test("renders key marketing routes", async () => {
@@ -81,7 +82,20 @@ test("contact form is wired to email Ari", async () => {
 
   const html = await response.text();
   assert.match(html, /formsubmit\.co\/ari@kanarycalling\.com/i);
-  assert.match(html, /<input(?=[^>]*name="website")(?=[^>]*type="text")(?=[^>]*required)[^>]*>/i);
-  assert.match(html, /placeholder="www\.example\.com"/i);
+  assert.match(html, /<input(?=[^>]*name="name")(?=[^>]*required)[^>]*>/i);
+  assert.match(html, /<input(?=[^>]*name="email")(?=[^>]*type="email")(?=[^>]*required)[^>]*>/i);
+  assert.match(html, /<input(?=[^>]*name="phone")(?=[^>]*type="tel")(?=[^>]*required)[^>]*>/i);
+  assert.match(html, /<textarea(?=[^>]*name="notes")(?![^>]*required)[^>]*>/i);
+  assert.doesNotMatch(html, /name="(?:company|website|offer|buyers)"/i);
   assert.doesNotMatch(html, /preview does not send messages/i);
+});
+
+test("ROI calculator remains directly available but unlisted", async () => {
+  const response = await render("/roi");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /Do the sales math\./i);
+  assert.match(html, /name="robots" content="noindex, nofollow"/i);
+  assert.doesNotMatch(html, /href="\/roi"/i);
 });

@@ -16,7 +16,6 @@ export function SiteHeader() {
       <nav className="desktop-navigation" aria-label="Main navigation">
         <Link href="/what-we-do">What we do</Link>
         <Link href="/who-we-help">Who we help</Link>
-        <Link href="/roi">ROI</Link>
         <Link href="/about">About</Link>
         <Link href="/faq">FAQ</Link>
         <Link className="button button-small" href="/contact">Book a fit call</Link>
@@ -26,7 +25,6 @@ export function SiteHeader() {
         <nav aria-label="Mobile navigation">
           <Link href="/what-we-do">What we do</Link>
           <Link href="/who-we-help">Who we help</Link>
-          <Link href="/roi">ROI</Link>
           <Link href="/about">About</Link>
           <Link href="/faq">FAQ</Link>
           <Link className="button" href="/contact">Book a fit call</Link>
@@ -41,7 +39,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div><Link href="/"><Logo /></Link><p>Focused cold calling for B2B teams.</p></div>
       <div className="footer-links">
-        <div><strong>Explore</strong><Link href="/what-we-do">What we do</Link><Link href="/who-we-help">Who we help</Link><Link href="/roi">ROI calculator</Link><Link href="/about">About</Link></div>
+        <div><strong>Explore</strong><Link href="/what-we-do">What we do</Link><Link href="/who-we-help">Who we help</Link><Link href="/about">About</Link></div>
         <div><strong>Connect</strong><Link href="/contact">Book a fit call</Link><Link href="/faq">FAQ</Link></div>
         <div><strong>Legal</strong><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></div>
       </div>
