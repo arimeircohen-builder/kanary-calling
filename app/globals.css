@@ -251,6 +251,7 @@ h1 span:after { content: ""; position: absolute; left: -1%; right: -2%; bottom: 
   .section-title-row .text-link, .section-title-row .button { display: inline-flex; margin-top: 25px; }
   .service-grid, .fit-grid, .process-list, .audience-grid, .deliverables-section ul, .signals-section ul, .not-for-you > div, .contact-form { grid-template-columns: 1fr; }
   .service-grid article, .service-grid article:nth-child(2n), .service-grid article:nth-child(3n), .fit-grid article, .audience-grid article, .audience-grid article:nth-child(2n), .audience-grid article:nth-child(3n), .process-list li, .process-list li:nth-child(2) { border-right: 0; border-bottom: 1px solid var(--ink); }
+  .service-grid article:not(:last-child) { border-bottom: 1px solid var(--ink); }
   .service-grid article:last-child, .fit-grid article:last-child, .audience-grid article:last-child, .process-list li:last-child { border-bottom: 0; }
   .not-fit { grid-template-columns: 1fr; }
   .not-fit ul { grid-template-columns: 1fr; }
