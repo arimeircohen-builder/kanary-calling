@@ -306,6 +306,10 @@ h1 span:after { content: ""; position: absolute; left: -1%; right: -2%; bottom: 
   .roi-results { position: static; }
   .roi-method { gap: 55px; }
 }
+@media (max-width: 760px) {
+  .contact-form { grid-template-columns: 1fr; }
+  .contact-form .full { grid-column: auto; }
+}
 @media (max-width: 560px) {
   .site-header { height: 74px; padding: 0 20px; }
   .brand { font-size: 15px; }
@@ -320,7 +324,7 @@ h1 span:after { content: ""; position: absolute; left: -1%; right: -2%; bottom: 
   .section, .comparison-section, .process-section, .founder-section, .fractional-section, .detail-grid, .deliverables-section, .trust-section, .audience-section, .signals-section, .not-for-you, .about-intro, .ari-section, .why-kanary, .cta-band, .contact-page { padding-top: 80px; padding-bottom: 80px; }
   .section-title-row { display: block; }
   .section-title-row .text-link, .section-title-row .button { display: inline-flex; margin-top: 25px; }
-  .service-grid, .fit-grid, .process-list, .audience-grid, .deliverables-section ul, .signals-section ul, .not-for-you > div, .contact-form { grid-template-columns: 1fr; }
+  .service-grid, .fit-grid, .process-list, .audience-grid, .deliverables-section ul, .signals-section ul, .not-for-you > div { grid-template-columns: 1fr; }
   .service-grid article, .service-grid article:nth-child(2n), .service-grid article:nth-child(3n), .fit-grid article, .audience-grid article, .audience-grid article:nth-child(2n), .audience-grid article:nth-child(3n), .process-list li, .process-list li:nth-child(2) { border-right: 0; border-bottom: 1px solid var(--ink); }
   .service-grid article:not(:last-child) { border-bottom: 1px solid var(--ink); }
   .service-grid article:last-child, .fit-grid article:last-child, .audience-grid article:last-child, .process-list li:last-child { border-bottom: 0; }
@@ -337,7 +341,6 @@ h1 span:after { content: ""; position: absolute; left: -1%; right: -2%; bottom: 
   .ari-manifesto { grid-template-columns: 1fr; }
   .why-mark { transform: scale(.78); margin: -45px; }
   .contact-form { padding: 25px; }
-  .contact-form .full { grid-column: auto; }
   .roi-benefits { margin-top: -20px; padding: 0 20px; grid-template-columns: 1fr; }
   .roi-benefits > div { min-height: 115px; margin: -1px 0 0; }
   .roi-benefits > div:nth-child(2) { margin-right: 0; }

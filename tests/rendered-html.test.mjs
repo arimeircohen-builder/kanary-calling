@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render(path = "/") {
@@ -83,11 +84,20 @@ test("contact form is wired to email Ari", async () => {
   const html = await response.text();
   assert.match(html, /formsubmit\.co\/ari@kanarycalling\.com/i);
   assert.match(html, /<input(?=[^>]*name="name")(?=[^>]*required)[^>]*>/i);
+  assert.match(html, /<input(?=[^>]*name="company")(?=[^>]*required)[^>]*>/i);
   assert.match(html, /<input(?=[^>]*name="email")(?=[^>]*type="email")(?=[^>]*required)[^>]*>/i);
   assert.match(html, /<input(?=[^>]*name="phone")(?=[^>]*type="tel")(?=[^>]*required)[^>]*>/i);
   assert.match(html, /<textarea(?=[^>]*name="notes")(?![^>]*required)[^>]*>/i);
-  assert.doesNotMatch(html, /name="(?:company|website|offer|buyers)"/i);
+  assert.doesNotMatch(html, /name="(?:website|offer|buyers)"/i);
   assert.doesNotMatch(html, /preview does not send messages/i);
+});
+
+test("contact inquiries use the submitter and company in the email subject", async () => {
+  const source = await readFile(new URL("../app/contact/contact-form.tsx", import.meta.url), "utf8");
+
+  assert.match(source, /_subject:\s*`\$\{name\} - \$\{company\} Kanary Calling Website Form Inquiry`/);
+  assert.match(source, /if \(!name \|\| !company\)[\s\S]*?setStatus\("idle"\);[\s\S]*?return;/);
+  assert.match(source, /role="alert"/);
 });
 
 test("ROI calculator remains directly available but unlisted", async () => {
