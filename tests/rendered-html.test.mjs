@@ -83,6 +83,8 @@ test("contact form is wired to email Ari", async () => {
 
   const html = await response.text();
   assert.match(html, /formsubmit\.co\/ari@kanarycalling\.com/i);
+  assert.match(html, /12–24 hours/i);
+  assert.match(html, /Average response time/i);
   assert.match(html, /<input(?=[^>]*name="name")(?=[^>]*required)[^>]*>/i);
   assert.match(html, /<input(?=[^>]*name="company")(?=[^>]*required)[^>]*>/i);
   assert.match(html, /<input(?=[^>]*name="email")(?=[^>]*type="email")(?=[^>]*required)[^>]*>/i);
