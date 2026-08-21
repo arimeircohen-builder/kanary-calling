@@ -111,3 +111,18 @@ test("ROI calculator remains directly available but unlisted", async () => {
   assert.match(html, /name="robots" content="noindex, nofollow"/i);
   assert.doesNotMatch(html, /href="\/roi"/i);
 });
+
+test("Easter egg remains directly available but unlisted", async () => {
+  const response = await render("/egg");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /Easter egg \| Kanary Calling/i);
+  assert.match(html, /name="robots" content="noindex, nofollow"/i);
+  assert.match(html, /src="\/giant-egg\.jpg"/i);
+  assert.match(html, /alt="A giant cream-colored egg"/i);
+  assert.doesNotMatch(html, /site-header|site-footer|<a\b/i);
+
+  const homepage = await render("/");
+  assert.doesNotMatch(await homepage.text(), /href="\/egg"/i);
+});
